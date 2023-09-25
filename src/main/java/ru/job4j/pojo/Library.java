@@ -1,5 +1,7 @@
 package ru.job4j.pojo;
 
+import java.sql.SQLOutput;
+
 public class Library {
     public static void main(String[] args) {
         Book book = new Book("Таинственный остров", 500);
@@ -21,9 +23,10 @@ public class Library {
             System.out.println(bk.getName() + " - " + bk.getCount() + " стр. ");
         }
         for (int i = 0; i < libr.length; i++) {
-            libr[i] = book4;
             Book bk = libr[i];
-            System.out.println(bk.getName() + " - " + bk.getCount() + " стр. ");
+            if ("Clean code".equals(bk.getName())) {
+                System.out.println(bk.getName() + " - " + bk.getCount() + " стр. ");
+            }
         }
     }
 }
