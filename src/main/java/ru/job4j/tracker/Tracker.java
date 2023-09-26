@@ -51,8 +51,7 @@ public class Tracker {
         if (index != -1) {
             items[index] = item;
             return true;
-        } else {
-            return false;
         }
+        return false;
     }
 }
