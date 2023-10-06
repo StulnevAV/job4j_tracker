@@ -2,8 +2,6 @@ package ru.job4j.tracker;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
-
 import static org.assertj.core.api.Assertions.assertThat;
 
 class StartUITest {
@@ -105,7 +103,7 @@ class StartUITest {
     void whenFindAllActionTestOutputIsSuccessfully() {
         Output out = new StubOutput();
         Tracker tracker = new Tracker();
-        Item one = tracker.add(new Item("test1"));
+        tracker.add(new Item("test1"));
         Input in = new StubInput(
                 new String[]{"0", "1"}
         );
