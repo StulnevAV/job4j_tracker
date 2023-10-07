@@ -103,7 +103,7 @@ class StartUITest {
     void whenFindAllActionTestOutputIsSuccessfully() {
         Output out = new StubOutput();
         Tracker tracker = new Tracker();
-        tracker.add(new Item("test1"));
+        Item one = tracker.add(new Item("test1"));
         Input in = new StubInput(
                 new String[]{"0", "1"}
         );
@@ -118,6 +118,7 @@ class StartUITest {
                         + "0. Показать все заявки" + ln
                         + "1. Завершить программу" + ln
                         + "=== Вывод всех заявок ===" + ln
+                        + one + ln
                         + "Меню:" + ln
                         + "0. Показать все заявки" + ln
                         + "1. Завершить программу" + ln
