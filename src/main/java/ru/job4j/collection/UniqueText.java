@@ -13,7 +13,7 @@ public class UniqueText {
         }
         for (String texts : text) {
             if (!check.contains(texts)) {
-                return false;
+                rsl = false;
             }
         }
         return rsl;
