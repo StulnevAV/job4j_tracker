@@ -32,7 +32,7 @@ public class AnalyzeByMap {
 
     public static List<Label> averageScoreBySubject(List<Pupil> pupils) {
         List<Label> label = new ArrayList<>();
-        HashMap<String, Integer> map = new LinkedHashMap<>();
+        Map<String, Integer> map = new LinkedHashMap<>();
         for (Pupil pupil : pupils) {
             for (Subject subject : pupil.subjects()) {
                 map.merge(subject.name(), subject.score(), Integer::sum);
